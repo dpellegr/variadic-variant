@@ -1,7 +1,5 @@
-#include <iostream>
 #include <stdexcept>
 #include <typeinfo>
-
 
 // implementation details, the user should not import this:
 namespace variant_impl {
@@ -39,7 +37,6 @@ struct storage_ops<N, T, Ts...> {
 		else return storage_ops<N + 1, Ts...>::apply(n, data, v);
 	}
 };
-
 
 template<int N>
 struct storage_ops<N> {
